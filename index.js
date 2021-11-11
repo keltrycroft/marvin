@@ -1,4 +1,5 @@
 const express = require('express');
+const SlackBot = require('slackbots');
 const { appendFile } = require('fs');
 const PORT = process.env.PORT || 5000;
 
@@ -48,9 +49,15 @@ var textOptions = [
 
 ]
 
+const bot = new SlackBot({
+    token: `${process.env.BOT_TOKEN}`,
+    name: 'marvin'
+})
+
+
 express()
-    .get('/', (req, res) => res.send(textOptions[Math.floor(Math.random() * textOptions.length)]))
-    .post('/post', (req, res) => res.send({response_type: "in_channel", text: textOptions[Math.floor(Math.random() * textOptions.length)]}))
+    .get('/', (req, res) => res.send({"response_type": "in_channel", "text": textOptions[Math.floor(Math.random() * textOptions.length)]}))
+    .post('/', (req, res) => res.send({"response_type": "in_channel", "text": textOptions[Math.floor(Math.random() * textOptions.length)]}))
     .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 
