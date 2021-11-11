@@ -50,7 +50,7 @@ var textOptions = [
 
 express()
     .get('/', (req, res) => res.send(textOptions[Math.floor(Math.random() * textOptions.length)]))
-    .post('/', (req, res) => res.send({response_type: "in_channel", text: textOptions[Math.floor(Math.random() * textOptions.length)]}))
+    .post('/post', (req, res) => res.send({response_type: "in_channel", text: textOptions[Math.floor(Math.random() * textOptions.length)]}))
     .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 
