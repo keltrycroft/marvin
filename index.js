@@ -1,5 +1,4 @@
 const express = require('express');
-const { appendFile } = require('fs');
 const PORT = process.env.PORT || 5000;
 
 var textOptions = [
@@ -50,7 +49,6 @@ var textOptions = [
 
 express()
     .get('/', (req, res) => res.send({"response_type": "in_channel", "text": textOptions[Math.floor(Math.random() * textOptions.length)]}))
-    .post('/', (req, res) => res.send({"response_type": "in_channel", "text": textOptions[Math.floor(Math.random() * textOptions.length)]}))
     .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 
