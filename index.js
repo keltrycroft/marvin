@@ -1,4 +1,5 @@
 const express = require('express');
+const { appendFile } = require('fs');
 const PORT = process.env.PORT || 5000;
 
 var textOptions = [
@@ -37,7 +38,7 @@ var textOptions = [
     "We need something that my mom can use.",
     "Users won't want to click through that many layers of hierarchy.",
     "OK, but what about internationalization?",
-    "Look, would you just get off your Be obsession for FIVE MINUTES and talk serious design with us?",
+    "Can you talk serious design with us?",
     "That's a good idea -- you should do that on your home page.",
     "That's great, but I thought that whole idea was discredited years ago.",
     "What you're not seeing is the difference between an 'is-a' and a 'has-a' relationship.",
@@ -49,5 +50,7 @@ var textOptions = [
 
 express()
     .get('/', (req, res) => res.send(textOptions[Math.floor(Math.random() * textOptions.length)]))
+    .post('/', (req, res) => res.send({response_type: "in_channel", text: textOptions[Math.floor(Math.random() * textOptions.length)]}))
     .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+
 
