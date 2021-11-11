@@ -1,5 +1,4 @@
 const express = require('express');
-const SlackBot = require('slackbots');
 const { appendFile } = require('fs');
 const PORT = process.env.PORT || 5000;
 
@@ -46,13 +45,6 @@ var textOptions = [
     "Well, that's great if you have an AI running the thing. But if you're not, then you're not doing it right.",
     "That's a good idea, but I think it's going to be a long-term maintenance nightmare.",
     "I think you're doing a good job of thinking about the problem, but you're not thinking about the solution.",
-
-]
-
-const bot = new SlackBot({
-    token: `${process.env.BOT_TOKEN}`,
-    name: 'marvin'
-})
 
 
 express()
