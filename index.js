@@ -46,6 +46,7 @@ var textOptions = [
     "That's a good idea, but I think it's going to be a long-term maintenance nightmare.",
     "I think you're doing a good job of thinking about the problem, but you're not thinking about the solution.",
 
+]
 
 express()
     .get('/', (req, res) => res.send({"response_type": "in_channel", "text": textOptions[Math.floor(Math.random() * textOptions.length)]}))
