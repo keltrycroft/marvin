@@ -1,11 +1,9 @@
----
-title: "Marvin"
----
+# Marvin
 "The brain the size of a planet, and all I hear is bad ideas"
 
 This is Marvin, a Slackbot that doesn't like any of your ideas. Inspired by this Hacker News Post: [Things to say when you're losing a technical argument][hn]. The list has been slightly modified to make it more generic and a little less hostile.
 
-![screenshot](/assets/screenshot.png "An example")
+![screenshot](/screenshot.png "An example")
 ### Responses
 All of his reponses are in index.js, but here's some examples:
 * "Trying to build a team behind that technology would be a staffing nightmare."
