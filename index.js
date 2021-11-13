@@ -44,7 +44,6 @@ var textOptions = [
     "Well, that's great if you have an AI running the thing. But if you're not, then you're not doing it right.",
     "That's a good idea, but I think it's going to be a long-term maintenance nightmare.",
     "I think you're doing a good job of thinking about the problem, but you're not thinking about the solution.",
-
 ]
 
 express()
