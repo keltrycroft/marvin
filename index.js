@@ -44,6 +44,16 @@ var textOptions = [
     "Well, that's great if you have an AI running the thing. But if you're not, then you're not doing it right.",
     "That's a good idea, but I think it's going to be a long-term maintenance nightmare.",
     "I think you're doing a good job of thinking about the problem, but you're not thinking about the solution.",
+    "That's out of scope for this context.",
+    "There's no metrics proving that is actually needed.",
+    "There's no customer feedback asking for that.",
+    "Maybe... but that _plus_ training, documentation, and infra costs? No chance.",
+    "You know, there are plenty of _existing_ things to write your blog post about.",
+    "_I_ agree, but you should know that at the last drinkup, the CTO swore he'd fire the next person who tried to do that.",
+    "I think this is an XY problem.",
+    "Oh, we use Excel for that.",
+    "I think John wrote some stored procedures and cron jobs before he left that have been responsible for that ever since?",
+    "There's a raspberry pi behind the office refrigerator that handles that.",    
 ]
 
 express()
